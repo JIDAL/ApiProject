@@ -96,6 +96,7 @@ class PersonalInformationController extends AbstractFOSRestController
      */
     public function putPersonalPhoto(Request $request, Attachment $attachment, PersonalInformation $presentation, ConstraintViolationListInterface $violations){
         //modification from repo
+      
         try{
             if (count($violations)) {
                 throw  new ValidatorException();
