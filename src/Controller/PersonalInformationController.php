@@ -95,13 +95,11 @@ class PersonalInformationController extends AbstractFOSRestController
      * @return View
      */
     public function putPersonalPhoto(Request $request, Attachment $attachment, PersonalInformation $presentation, ConstraintViolationListInterface $violations){
-        // comment branch test
-        // branch test
+
         try{
             if (count($violations)) {
                 throw  new ValidatorException();
             }
-            // change in remote 
             $attachment = $this->em->getRepository('App:Attachment')->find($attachment->getId());
             if(!$attachment){
                 return $this->view([], ApiResponse::NOT_FOUND);
