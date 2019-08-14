@@ -100,6 +100,7 @@ class PersonalInformationController extends AbstractFOSRestController
             if (count($violations)) {
                 throw  new ValidatorException();
             }
+            // change in remote 
             $attachment = $this->em->getRepository('App:Attachment')->find($attachment->getId());
             if(!$attachment){
                 return $this->view([], ApiResponse::NOT_FOUND);
