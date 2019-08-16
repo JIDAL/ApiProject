@@ -96,7 +96,7 @@ class PersonalInformationController extends AbstractFOSRestController
      */
     public function putPersonalPhoto(Request $request, Attachment $attachment, PersonalInformation $presentation, ConstraintViolationListInterface $violations){
         // change from branch remote
-        // change from local2
+        // change from local3
         try{
             if (count($violations)) {
                 throw  new ValidatorException();
